@@ -1,0 +1,2 @@
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+mol_data/1-50000.zip filter=lfs diff=lfs merge=lfs -text
