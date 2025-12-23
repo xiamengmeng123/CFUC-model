@@ -130,7 +130,7 @@ regressors = [
     ("SV", SVR(),{'C': [0.1,1,10]},"gamma": ["scale", 0.01, 0.1], "epsilon": [0.05, 0.1, 0.2]}),  # 支持向量回归模型 Support Vector
     ("K-NN", KNeighborsRegressor(),{'n_neighbors': [3,5,7]},"weights": ["uniform", "distance"], "p": [1, 2]}),  # K-最近邻回归模型 K-Nearest Neighbors
     ("DT", DecisionTreeRegressor(random_state=42),{'max_depth': [3,5,7],"min_samples_leaf": [1, 2, 4]}),  # 决策树回归模型 Decision Tree
-    ("RF", RandomForestRegressor(random_state=42),{{"n_estimators": [200, 500],"max_depth": [None, 10, 20],"max_features": ["sqrt", "log2", 0.5]}), # 随机森林回归模型 Random Forest
+    ("RF", RandomForestRegressor(random_state=42),{"n_estimators": [200, 500],"max_depth": [10, 20,30]}), # 随机森林回归模型 Random Forest
     ("GB", GradientBoostingRegressor(random_state=42),{'n_estimators': [50,100,200],"learning_rate": [0.03, 0.1],"max_depth": [2, 3, 4]}), # 梯度提升回归模型 Gradient Boosting
     ("XGB", XGBRegressor(random_state=42),{'n_estimators': [50,100,200],"learning_rate": [0.03, 0.1],"max_depth": [3, 5, 7]}), # XGBoost回归模型  XGBoost
     ("LGBM", LGBMRegressor(random_state=42),{"n_estimators": [500, 1000],"learning_rate": [0.03, 0.1],'num_leaves': [31,63,127]}), # LightGBM回归模型 LightGBM
